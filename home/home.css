@@ -1,0 +1,413 @@
+body{
+    background-color: #191a1a   ;
+}
+.logo{
+    color: rgb(80, 0, 93);
+    font-size: 50px;
+    font-weight: 900; 
+    margin-top: 10px;
+    margin-right: 7%;
+    margin-left: 1%;
+}
+.logo span{
+    color:chocolate ;
+}
+header .lesthome{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    margin-top: -10px;
+    margin-left: -8px;
+    margin-right: -8px;
+    padding: 20px;
+}
+.links a {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+.links   a.learn-more {
+    width: 10rem;
+    height: auto;
+}
+.links   a.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #282936;
+    border-radius: 1.625rem;
+}
+.links a.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+}
+.links a.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+.links a.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+}
+.links  a.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+}
+.links a:hover .circle {
+    width: 100%;
+}
+.links a:hover .circle .icon.arrow {
+    background: #ff0000;
+    transform: translate(1rem, 0);
+}
+.links a:hover .button-text {
+    color: #ff0000;
+}
+.container{
+    /* background-image:url(pexels-daria-rohova-19824837.jpg); */
+    background-color:#e1e1e1;
+    width:  1200px;
+    height: 600px;
+    border-radius: 50px;
+    margin-top: 15px;
+    box-shadow: 5px 16px 20px 0px black;
+}
+.paragraph {
+  color: rgb(56, 53, 53);
+  font-size: 20px;
+  font-weight: 700;
+  margin-left:50px;
+}
+
+.paragraph span{
+  color: red;
+  font-size: 40px;
+  font-weight: 900;
+}
+@keyframes main{
+    0%  {color: red; }
+    10% {color: green;}
+    20% {color: blue; }
+    30% {color: rgb(158, 136, 136); }
+    40% {color: rgb(0, 240, 40); }
+    50% {color: rgb(255, 0, 191);}
+    60% {color: rgb(55, 0, 255); }
+    70% {color: var(--main-color);}
+    80% {color: rgb(255, 0, 191);  }
+    90% {color: rgb(55, 0, 255); }
+    100% {color: var(--main-color); }
+}
+.container .write {
+    justify-content:space-between;
+    display: flex;
+}
+.cube-loader {
+    position: relative;
+  /* u can choose any size */
+    width: 75px;
+    height: 75px;
+    transform-style: preserve-3d;
+    transform: rotateX(-30deg);
+    animation: animate 4s linear infinite;
+    margin-left:20%;
+    margin-top: 5%;
+  }
+  @keyframes animate {
+    0% {
+      transform: rotateX(-30deg) rotateY(0);
+    }
+    100% {
+      transform: rotateX(-30deg) rotateY(360deg);
+    }
+  }
+  .cube-loader .cube-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* top: 0;
+    left: 0; */
+    transform-style: preserve-3d;
+  }
+  .cube-loader .cube-wrapper .cube-span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* top: 0;
+    left: 0; */
+    /* width 75px / 2 = 37.5px */
+    transform: rotateY(calc(90deg * var(--i))) translateZ(37.5px);
+    background: linear-gradient(
+      to bottom,
+      hsl(330, 3.13%, 25.1%) 0%,
+      hsl(177.27, 21.71%, 32.06%) 5.5%,
+      hsl(176.67, 34.1%, 36.88%) 12.1%,
+      hsl(176.61, 42.28%, 40.7%) 19.6%,
+      hsl(176.63, 48.32%, 43.88%) 27.9%,
+      hsl(176.66, 53.07%, 46.58%) 36.6%,
+      hsl(176.7, 56.94%, 48.91%) 45.6%,
+      hsl(176.74, 62.39%, 50.91%) 54.6%,
+      hsl(176.77, 69.86%, 52.62%) 63.4%,
+      hsl(176.8, 76.78%, 54.08%) 71.7%,
+      hsl(176.83, 83.02%, 55.29%) 79.4%,
+      hsl(176.85, 88.44%, 56.28%) 86.2%,
+      hsl(176.86, 92.9%, 57.04%) 91.9%,
+      hsl(176.88, 96.24%, 57.59%) 96.3%,
+      hsl(176.88, 98.34%, 57.93%) 99%,
+      hsl(176.89, 99.07%, 58.04%) 100%
+    );
+  }
+  .cube-top {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background: hsl(330, 3.13%, 25.1%) 0%;
+                        /* width 75px / 2 = 37.5px */
+    transform: rotateX(90deg) translateZ(37.5px);
+    transform-style: preserve-3d;
+  }
+  .cube-top::before {
+    content: '';
+    position: absolute;
+  /* u can choose any size */
+    width: 75px;
+    height: 75px;
+    background: hsl(176.61, 42.28%, 40.7%) 19.6%;
+    transform: translateZ(-90px);
+    filter: blur(10px);
+    box-shadow:
+    0 0 10px #323232,
+    0 0 20px hsl(176.61, 42.28%, 40.7%) 19.6%,
+    0 0 30px #323232,
+    0 0 40px hsl(176.61, 42.28%, 40.7%) 19.6%;
+  }
+  .h{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .tt button {
+    font-size: 18px;
+    color: #e1e1e1;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+}
+.tt button:focus,
+.tt button:hover {
+    color: #fff;
+}
+.tt button:focus:after,
+.tt button:hover:after {
+    width: 100%;
+    left: 0%;
+}
+.tt button:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
+#red{
+    color: #ff0000;
+  }
+#green{
+    color: green;
+  }
+#yellow{
+    color:yellow;
+  }
+#blue{
+    color: blue;
+  }
+#orange{
+    color: orange;
+}
+#normal{
+    /* color: #191a1a; */
+    color: #fff;
+}
+.two{
+    justify-content: center;
+    display: flex;
+    margin-left: -28%;
+}
+.new{
+  position: relative;
+  width: 160px;
+  height: 160px;
+  border: 10px solid #282828;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.1),
+    10px 10px 10px rgba(0, 0, 0, 0.4),
+    inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+    inset 10px 10px 10px rgba(0, 0, 0, 0.4);
+    margin-right:200px;
+    margin-top: 80px;
+    z-index: 1;
+}
+.new:before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  right: 25px;
+  bottom: 25px;
+  background: #212121;
+  border-radius: 50%;
+  border: 2px solid #292929;
+  box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.2),
+    inset 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+.new span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    -225deg,
+    #ff7402 0%,
+    #ffe700 50%,
+    #fff55e 100%);
+  filter: blur(20px);
+  z-index: -1;
+  animation: new 0.5s linear infinite;
+}
+@keyframes new {
+  0% {
+    transform:rotate(0deg);
+  }
+  100% {
+    transform:rotate(360deg);
+  }
+}
+.loader {
+  position: relative;
+  width: 108px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 150px;
+}
+.loader::after,
+.loader::before {
+  content: "";
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background-color: #fff;
+  background-image: radial-gradient(circle 14px, #0d161b 100%, transparent 0);
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  animation: eyeMove 10s infinite, blink 10s infinite;
+}
+@keyframes eyeMove {
+  0%,
+  10% {
+    background-position: 0px 0px;
+  }
+  13%,
+  40% {
+    background-position: -15px 0px;
+  }
+  43%,
+  70% {
+    background-position: 15px 0px;
+  }
+  73%,
+  90% {
+    background-position: 0px 15px;
+  }
+  93%,
+  100% {
+    background-position: 0px 0px;
+  }
+}
+@keyframes blink {
+  0%,
+  10%,
+  12%,
+  20%,
+  22%,
+  40%,
+  42%,
+  60%,
+  62%,
+  70%,
+  72%,
+  90%,
+  92%,
+  98%,
+  100% {
+    height: 48px;
+  }
+  11%,
+  21%,
+  41%,
+  61%,
+  71%,
+  91%,
+  99% {
+    height: 18px;
+  }
+}
+footer{
+  text-align: center;
+  font-size: 20px;
+  margin-top: 2%;
+  color: white;
+}
+footer span{
+  color: blue;
+  font-size: 22px;
+}
